@@ -1,0 +1,46 @@
+'''Python小练习：
+date:2018/11/13
+author:BetterMe1'''
+
+'''密码登录程序。要求：建立一个登录窗口，设定用户名为zhangsan,密码是python123。
+若用户名正确，密码也正确，则显示“Mr Zhang，欢迎你”；如果用户名错误，则显示“用户名错误，请重新输入！”；
+若密码不正确，则显示“对不起，密码错误，无法登陆！””'''
+
+'''
+u="zhangsan"
+k="python123"
+user=input("请输入用户名：")
+if user!=u:
+    print("用户名错误，请重新输入！")
+else:
+    key = input("请输入密码：")
+    if key!=k:
+        print("对不起，密码错误，无法登陆！")
+    else:
+        print("Mr Zhang，欢迎你")
+'''
+
+'''编写函数，接收一个字符串，分别统计大写字母、小写字母、数字、其他字符的个数，
+并以元组的形式返回结果'''
+
+'''
+str = input("请输入一个字符串:")
+def check(str):
+    # 初始化
+    A_n = 0  # 大写字母个数
+    a_n = 0  # 小写字母个数
+    num_n = 0  # 数字个数
+    other_n = 0  # 其他字符个数
+    for char in str:
+        if char.isdigit():  # 判断是否为数字
+            num_n = num_n + 1
+        elif char.isupper():  # 判断是否为大写字母
+            A_n = A_n + 1
+        elif char.islower():  # 判断是否为小写字母
+            a_n = a_n + 1
+        else:
+            other_n = other_n + 1
+    print("数字个数为：%d,大写字母个数为：%d,小写字母个数为：%d,其他字符个数为：%d" % (num_n, A_n, a_n, other_n))
+    return str,num_n, A_n, a_n, other_n  #返回多个值，结果以元组形式表示
+check(str)
+'''
